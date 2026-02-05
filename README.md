@@ -38,30 +38,30 @@ to install the package.
 
 ```nix
 {
-    inputs = {
-        nixpkgs.url = "...";
+  inputs = {
+    nixpkgs.url = "...";
 
-        minimalistic-cover-letter.url = "github:limwa/minimalistic-cover-letter";
-        minimalistic-cover-letter.inputs.nixpkgs.follows = "nixpkgs";
-    };
+    minimalistic-cover-letter.url = "github:limwa/minimalistic-cover-letter";
+    minimalistic-cover-letter.inputs.nixpkgs.follows = "nixpkgs";
+  };
 
-    outputs = {
-        nixpkgs,
-        minimalistic-cover-letter,
-        ...
-    }: {
-        devShells."<system>".default = let
-                pkgs = import nixpkgs {
-                    system = "<system";
-                };
-            in pkgs.mkShell {
-                packages = with pkgs; [
-                    (typst.withPackages (ps: [
-                        minimalistic-cover-letter.packages."<system>".default
-                    ]))
-                ];
-            };
-    }
+  outputs = {
+    nixpkgs,
+    minimalistic-cover-letter,
+    ...
+  }: {
+    devShells."<system>".default = let
+        pkgs = import nixpkgs {
+            system = "<system";
+        };
+      in pkgs.mkShell {
+        packages = with pkgs; [
+          (typst.withPackages (ps: [
+            minimalistic-cover-letter.packages."<system>".default
+          ]))
+        ];
+      };
+  }
 }
 ```
 
