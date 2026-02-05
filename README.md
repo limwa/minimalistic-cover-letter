@@ -3,6 +3,19 @@
 This repository contains a minimalistic cover letter template, that I've
 designed myself. Contributions are welcome!
 
+## Example
+
+The template creates a document that looks like this:
+
+![Minimalistic Cover Letter Example](./minimalistic-cover-letter/0.1.0/assets/thumbnail_1.png)
+
+## Requirements
+
+This template requires that you have the following fonts available:
+
+- Open Sans
+- New Computer Modern
+
 ## Usage
 
 ### Universe (Typst Package Repository)
