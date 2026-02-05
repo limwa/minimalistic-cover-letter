@@ -1,0 +1,17 @@
+[package]
+name = "minimalistic-cover-letter"
+version = "0.1.0"
+compiler = "0.14.2"
+entrypoint = "lib.typ"
+authors = [ "André Lima <me@limwa.pt>" ]
+license = "MIT"
+description = "A clean and minimalistic cover letter template for Typst"
+keywords = ["Cover Letter", "Letter", "Minimalistic"]
+categories = ["cv"]
+disciplines = []
+repository = "https://github.com/limwa/minimalistic-cover-letter"
+
+[template]
+path = "template"
+entrypoint = "template.typ"
+thumbnail = "assets/thumbnail_1.png"
